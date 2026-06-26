@@ -112,6 +112,11 @@
     max-width: 440px;
   }
   .hero-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
+  .fire-badge-wrap {
+    align-self: stretch;
+    text-align: center;
+    margin-top: 4px;
+  }
   .btn-primary {
     background: var(--navy);
     color: var(--white);
@@ -653,11 +658,7 @@
       margin-left: 0;
     }
 
-    /* FIRE BADGE: always centered on mobile */
-    .hero-actions > div[style*="max-width: 260px"] {
-      width: 100% !important;
-      text-align: center !important;
-    }
+
 
     .email-form { flex-direction: column; }
     .footer-links { text-align: left; }
@@ -846,7 +847,7 @@
           </div>
         </a>
       </div>
-      <div style="text-align: center; margin-top: 4px; width: 100%; max-width: 260px;">
+      <div class="fire-badge-wrap">
         <p style="color: #FFB800; font-size: 15px; font-weight: 600; letter-spacing: 0.5px; animation: pulse 1.5s infinite; margin: 0; white-space: nowrap;">🔥 20% Off Ends Tonight!</p>
       </div>
       <style>
