@@ -1141,10 +1141,37 @@
 <section class="email-section">
   <h2>Stay Updated</h2>
   <p>Get wellness tips and updates delivered to your inbox.</p>
-  <form class="email-form" method="post" action="https://systeme.io/embedded/42104022/subscription">
-    <input type="email" name="email" placeholder="Enter your email address..." required>
+  <form class="email-form" id="dw-email-form" method="post" action="https://systeme.io/embedded/42104022/subscription">
+    <input type="email" name="email" id="dw-email-input" placeholder="Enter your email address..." required>
     <button type="submit">Submit</button>
   </form>
+  <p id="dw-email-thanks" style="display:none; font-size:14px; color:var(--text-soft); margin-top:16px;">
+    Thanks! Please check your inbox to confirm your subscription.
+  </p>
+  <script>
+    (function () {
+      var form = document.getElementById('dw-email-form');
+      var thanks = document.getElementById('dw-email-thanks');
+      form.addEventListener('submit', function (e) {
+        e.preventDefault();
+        var email = document.getElementById('dw-email-input').value;
+        var data = new URLSearchParams();
+        data.append('email', email);
+
+        fetch(form.action, {
+          method: 'POST',
+          mode: 'no-cors',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: data
+        }).finally(function () {
+          // no-cors means we can't read the response, but the request
+          // still reaches Systeme.io, so we treat this as success either way.
+          form.style.display = 'none';
+          thanks.style.display = 'block';
+        });
+      });
+    })();
+  </script>
 </section>
 
 <footer>
