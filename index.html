@@ -562,21 +562,55 @@
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
     .hero {
-      grid-template-columns: 1fr;
-      gap: 40px;
-      padding: 48px 20px 56px;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+      padding: 0 20px 56px;
       text-align: center;
     }
-    .hero h1 { font-size: 30px; }
-    .hero-trust { justify-content: center; }
-    .hero-actions { align-items: center; }
-    .hero-sub { margin: 0 auto 32px; }
-    .hero-img { order: -1; }
+    .hero-img {
+      order: 1;
+      margin: -60px -20px 0;
+      width: calc(100% + 40px);
+    }
+    .hero-img img {
+      width: 100%;
+      max-width: 100%;
+      border-radius: 0;
+    }
+    .hero-text-col {
+      order: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .hero-trust {
+      order: 5;
+      justify-content: center;
+      margin-top: 24px;
+      padding-top: 20px;
+      border-top: 1px solid var(--border);
+      width: 100%;
+    }
+    .hero h1 {
+      order: 2;
+      font-size: 30px;
+      margin-top: 24px;
+    }
+    .hero-sub {
+      order: 3;
+      margin: 12px auto 0;
+    }
+    .hero-actions {
+      order: 4;
+      align-items: center;
+      margin-top: 24px;
+    }
     .pain-grid { grid-template-columns: 1fr; }
     .dw-grid-2, .dw-grid-3 { grid-template-columns: 1fr; }
     .inside { padding: 56px 20px 0; }
     
-    .carousel-item { width: 170px; } /* Slightly more optimized for smaller mobile screens */
+    .carousel-item { width: 170px; }
     .carousel-track { gap: 14px; padding-bottom: 24px; }
 
     .dwp-card { padding: 1.25rem; }
@@ -597,7 +631,7 @@
 </nav>
 
 <section class="hero">
-  <div>
+  <div class="hero-text-col">
     <div class="hero-trust" style="display: flex; align-items: center; gap: 10px; font-family: 'Poppins', 'Inter', sans-serif;">
       <span style="font-size: 36px;"></span>
       <div style="display: flex; flex-direction: column; align-items: center; gap: 3px;">
@@ -1084,8 +1118,8 @@
         </div>
         <div class="dwp-pricing-block">
           <div class="dwp-pricing-wrapper">
-            <span class="dwp-pricing">$16.99</span>
-            <span class="dwp-old-price">$21.99</span>
+            <span class="dwp-pricing">$18.99</span>
+            <span class="dwp-old-price">$23.99</span>
           </div>
           <div class="dwp-badge">🔥 Limited Time Offer</div>
         </div>
