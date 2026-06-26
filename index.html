@@ -653,10 +653,10 @@
       margin-left: 0;
     }
 
-    /* FIRE BADGE: detach from fixed-width btn container, center naturally */
-    .hero-actions > div[style*="width: 11.5rem"] {
-      width: auto !important;
-      position: static !important;
+    /* FIRE BADGE: always centered on mobile */
+    .hero-actions > div[style*="max-width: 260px"] {
+      width: 100% !important;
+      text-align: center !important;
     }
 
     .email-form { flex-direction: column; }
@@ -846,7 +846,7 @@
           </div>
         </a>
       </div>
-      <div style="text-align: center; margin-top: 6px; width: 100%; max-width: 220px;">
+      <div style="text-align: center; margin-top: 4px; width: 100%; max-width: 260px;">
         <p style="color: #FFB800; font-size: 15px; font-weight: 600; letter-spacing: 0.5px; animation: pulse 1.5s infinite; margin: 0; white-space: nowrap;">🔥 20% Off Ends Tonight!</p>
       </div>
       <style>
