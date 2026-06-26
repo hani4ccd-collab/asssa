@@ -112,11 +112,6 @@
     max-width: 440px;
   }
   .hero-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 4px; }
-  .fire-badge-wrap {
-    align-self: stretch;
-    text-align: center;
-    margin-top: 4px;
-  }
   .btn-primary {
     background: var(--navy);
     color: var(--white);
@@ -722,7 +717,8 @@
     <h1>Pain is Not Part<br>of the work.<br><span>Not Anymore.</span></h1>
     <p class="hero-sub">The Desk Wellness 12 in 1 Pack gives you simple science-based routines to reduce back, neck, shoulder, leg, and other pain you may experience, while restoring focus, energy, and comfort.</p>
     <div class="hero-actions">
-      <div style="text-align: left; margin: 10px 0;">
+      <div style="display: flex; flex-direction: column; align-items: center; width: fit-content;">
+      <div style="text-align: left; margin: 10px 0 0 0;">
         <style>
           .btn-star {
             display: flex;
@@ -847,8 +843,7 @@
           </div>
         </a>
       </div>
-      <div class="fire-badge-wrap">
-        <p style="color: #FFB800; font-size: 15px; font-weight: 600; letter-spacing: 0.5px; animation: pulse 1.5s infinite; margin: 0; white-space: nowrap;">🔥 20% Off Ends Tonight!</p>
+      <p class="fire-badge-wrap" style="color: #FFB800; font-size: 15px; font-weight: 600; letter-spacing: 0.5px; animation: pulse 1.5s infinite; margin: 6px 0 0 0; white-space: nowrap; text-align: center;">🔥 20% Off Ends Tonight!</p>
       </div>
       <style>
         @keyframes pulse {
