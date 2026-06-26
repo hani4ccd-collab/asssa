@@ -11,13 +11,6 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="preconnect" href="https://deskwellness.lemonsqueezy.com">
 <link rel="dns-prefetch" href="https://deskwellness.lemonsqueezy.com">
- <script type="text/javascript">
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "xd5uui585t");
-</script>
 <style>
   *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
@@ -294,7 +287,6 @@
     .carousel-item.square-card { width: 170px; height: 170px; }
     .carousel-track { gap: 14px; padding-bottom: 24px; }
   }
-  }
 
   /* ── DETAILS GRID ── */
   .dw-group { margin-bottom: 40px; }
@@ -568,6 +560,27 @@
 
   /* ── RESPONSIVE ── */
   @media (max-width: 768px) {
+    /* NAV: scale down to fit all phones cleanly */
+    nav {
+      padding: 0 14px;
+      height: 56px;
+    }
+    body { padding-top: 56px; }
+    .nav-logo {
+      font-size: 13px;
+      gap: 7px;
+    }
+    .nav-logo svg,
+    .nav-logo img {
+      width: 24px;
+      height: 24px;
+    }
+    .nav-cta {
+      font-size: 12px;
+      padding: 7px 14px;
+      white-space: nowrap;
+    }
+
     .hero {
       display: flex;
       flex-direction: column;
@@ -623,9 +636,57 @@
     .carousel-track { gap: 14px; padding-bottom: 24px; }
 
     .dwp-card { padding: 1.25rem; }
+
+    /* PRICE: prevent $23.99 from being cropped — switch to inline-flow layout */
+    .dwp-pricing-wrapper {
+      position: static;
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 10px;
+    }
+    .dwp-card .dwp-old-price {
+      position: static;
+      transform: none;
+      margin-left: 0;
+    }
+
+    /* FIRE BADGE: detach from fixed-width btn container, center naturally */
+    .hero-actions > div[style*="width: 11.5rem"] {
+      width: auto !important;
+      position: static !important;
+    }
+
     .email-form { flex-direction: column; }
     .footer-links { text-align: left; }
     .footer-payments { flex-direction: column; align-items: flex-start; }
+  }
+
+  /* ── EXTRA SMALL PHONES (≤ 390px — e.g. Oppo A94, iPhone SE) ── */
+  @media (max-width: 390px) {
+    nav {
+      padding: 0 10px;
+      height: 52px;
+    }
+    body { padding-top: 52px; }
+    .nav-logo {
+      font-size: 12px;
+      gap: 6px;
+    }
+    .nav-logo svg,
+    .nav-logo img {
+      width: 22px;
+      height: 22px;
+    }
+    .nav-cta {
+      font-size: 11px;
+      padding: 6px 11px;
+    }
+    .hero h1 { font-size: 26px; }
+    .hero-sub { font-size: 14px; }
+    .carousel-item.tall-card { width: 148px; height: 210px; }
+    .carousel-item.square-card { width: 148px; height: 148px; }
+    .dwp-card .dwp-pricing { font-size: 2.2rem; }
   }
 </style>
 </head>
@@ -651,7 +712,7 @@
           <span style="color: #FFB800; font-size: 22px;">⭐</span>
           <span style="color: #FFB800; font-size: 22px;">⭐</span>
         </div>
-        <span style="font-size: 0.82rem; color: #555; font-weight: 500;">Trusted by +1,000 Desk Workers</span>
+        <span style="font-size: 0.82rem; color: #555; font-weight: 500;">Trusted by 500+ Desk Workers</span>
       </div>
       <span style="font-size: 36px;"></span>
     </div>
@@ -783,13 +844,13 @@
           </div>
         </a>
       </div>
-      <div style="text-align: center; margin-top: 1px; width: 11.5rem; position: relative; height: 20px;">
-        <p style="position: absolute; left: 50%; transform: translateX(-50%); top: 0; color: #FFB800; font-size: 14px; font-weight: 600; letter-spacing: 0.5px; animation: pulse 1.5s infinite; margin: 0; white-space: nowrap;">🔥 20% Off Ends Tonight!</p>
+      <div style="text-align: center; margin-top: 6px; width: 100%; max-width: 220px;">
+        <p style="color: #FFB800; font-size: 13px; font-weight: 600; letter-spacing: 0.5px; animation: pulse 1.5s infinite; margin: 0; white-space: nowrap;">🔥 20% Off Ends Tonight!</p>
       </div>
       <style>
         @keyframes pulse {
-          0%, 100% { opacity: 1; transform: translateX(-50%) scale(1); }
-          50% { opacity: 0.75; transform: translateX(-50%) scale(1.05); }
+          0%, 100% { opacity: 1; transform: scale(1); }
+          50% { opacity: 0.75; transform: scale(1.05); }
         }
       </style>
     </div>
