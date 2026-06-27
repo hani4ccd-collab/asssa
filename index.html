@@ -273,7 +273,7 @@
   .carousel-item img {
     width: 100%;
     height: 100%;
-    object-fit: contain; /* Retains original content boundaries cleanly */
+    object-fit: cover; /* Fills the card fully, no white space */
     display: block;
     transition: transform 0.4s ease;
   }
@@ -283,10 +283,9 @@
 
   /* Mobile adjustment keeping proportions consistent */
   @media (max-width: 768px) {
-    .carousel-item.tall-card { width: 220px; height: 310px; }
-    .carousel-item.square-card { width: 220px; height: 220px; }
+    .carousel-item.tall-card { width: 170px; height: 240px; }
+    .carousel-item.square-card { width: 170px; height: 170px; }
     .carousel-track { gap: 14px; padding-bottom: 24px; }
-    .carousel-item img { object-fit: cover; }
   }
 
   /* ── DETAILS GRID ── */
