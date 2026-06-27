@@ -639,19 +639,7 @@
 
     .dwp-card { padding: 1.25rem; }
 
-    /* PRICE: on mobile, move $23.99 below $18.99 so it never gets cropped */
-    .dwp-pricing-wrapper {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 2px;
-    }
-    .dwp-card .dwp-old-price {
-      position: static;
-      transform: none;
-      margin-left: 0;
-      font-size: 0.9rem;
-    }
+    /* PRICE: $23.99 inherits flex layout from base styles — no override needed */
 
 
 
@@ -1074,8 +1062,11 @@
       margin-top: 1.7rem;
     }
     .dwp-pricing-wrapper {
-      position: relative;
-      display: inline-block;
+      display: inline-flex;
+      align-items: baseline;
+      gap: 10px;
+      flex-wrap: wrap;
+      justify-content: center;
       line-height: 1;
     }
     .dwp-card .dwp-pricing {
@@ -1087,11 +1078,6 @@
       display: inline-block;
     }
     .dwp-card .dwp-old-price {
-      position: absolute;
-      left: 100%;
-      top: 50%;
-      transform: translateY(-50%);
-      margin-left: 12px;
       font-size: 1rem;
       color: rgba(0,0,0,0.25);
       text-decoration: line-through;
