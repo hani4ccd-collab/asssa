@@ -255,14 +255,14 @@
 
   /* 1. Taller setup for Big Images (Books/Guides) & Trackers */
   .carousel-item.tall-card {
-    width: 280px;
-    height: 390px;
+    width: 220px;
+    height: 310px; /* Made slightly taller to show off original vertical sizing */
   }
 
   /* 2. Preserved Square Size for Small Printable Reminders */
   .carousel-item.square-card {
-    width: 280px;
-    height: 280px;
+    width: 220px;
+    height: 220px; /* Kept perfectly square */
   }
 
   .carousel-item:hover {
@@ -273,7 +273,7 @@
   .carousel-item img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: contain; /* Retains original content boundaries cleanly */
     display: block;
     transition: transform 0.4s ease;
   }
@@ -286,6 +286,7 @@
     .carousel-item.tall-card { width: 220px; height: 310px; }
     .carousel-item.square-card { width: 220px; height: 220px; }
     .carousel-track { gap: 14px; padding-bottom: 24px; }
+    .carousel-item img { object-fit: cover; }
   }
 
   /* ── DETAILS GRID ── */
