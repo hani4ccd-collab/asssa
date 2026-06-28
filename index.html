@@ -991,7 +991,7 @@
 
   <div class="tracker-section">
     <p class="tracker-section-heading">✓ Printable Trackers</p>
-    <p class="tracker-section-sub">Print them out and keep every habit on track: posture, stretching, morning energy, and after-work recovery.</p>
+    <p class="tracker-section-sub">Print them out and keep every habit on track — posture, stretching, morning energy, and after-work recovery.</p>
     <div class="tracker-grid">
       <div class="tracker-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a405ce57ea039.04814255_PRINTABLEPosturePNG.webp" loading="lazy" alt="Posture Tracker"></div>
       <div class="tracker-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a405cd7295246.49470486_PRINTABLESTRETCHINGPNG.webp" loading="lazy" alt="Stretching Tracker"></div>
@@ -1002,7 +1002,7 @@
 
   <div class="reminders-section">
     <p class="reminders-section-heading">📌 Desk Reminder Cards</p>
-    <p class="reminders-section-sub">Small cards to place on your desk, quick visual cues that remind you to stretch, breathe, hydrate, and fix your posture throughout the day.</p>
+    <p class="reminders-section-sub">Small cards to place on your desk — quick visual cues that remind you to stretch, breathe, hydrate, and fix your posture throughout the day.</p>
     <div class="reminders-carousel">
       <div class="reminders-track">
         <div class="reminder-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058da60f8ba2.75411059_4_UpperTrapeziusStretch.webp" loading="lazy" alt="Release the neck"></div>
@@ -1018,6 +1018,56 @@
         <div class="reminder-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058e70520399.09078661_2_breathing.webp" loading="lazy" alt="Breathe Deep"></div>
       </div>
     </div>
+  </div>
+
+  <style>
+    .reminders-cta {
+      text-align: center;
+      margin: 32px 0 64px;
+    }
+    .reminders-cta a {
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      letter-spacing: 0.4px;
+      padding: 15px 40px;
+      border-radius: 10px;
+      text-decoration: none;
+      background: var(--navy-mid);
+      box-shadow: 0 4px 18px rgba(39, 76, 113, 0.35);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .reminders-cta a:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 26px rgba(39, 76, 113, 0.45);
+    }
+    .reminders-cta .cta-label {
+      position: relative;
+      z-index: 2;
+    }
+    .reminders-cta .cta-sweep {
+      position: absolute;
+      top: -50%; left: -75%;
+      width: 50%; height: 200%;
+      background: rgba(255,255,255,0.13);
+      transform: skewX(-20deg);
+      animation: reminderSweep 2.5s ease infinite;
+      z-index: 1;
+    }
+    @keyframes reminderSweep {
+      0%   { left: -75%; }
+      100% { left: 125%; }
+    }
+  </style>
+
+  <div class="reminders-cta">
+    <a href="https://deskwellness.lemonsqueezy.com/checkout/buy/81356098-d7e0-4a30-a652-3cbaf4097c43" target="_blank" rel="noopener">
+      <span class="cta-label">Get the Full Pack Now</span>
+      <span class="cta-sweep"></span>
+    </a>
   </div>
 
   <div class="dw-group">
