@@ -881,19 +881,6 @@
       <div class="carousel-item tall-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058b20000945.96997738_6TheCompleteVisualWellnessGuide.webp" loading="lazy" alt="Eye Care & Screen Relief"></div>
       <div class="carousel-item tall-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058b1456cbf9.31325731_5%EF%B8%8FEveningRecoveryforBusyDeskWorkers2.webp" loading="lazy" alt="Evening Recovery Guide"></div>
 
-
-
-      <div class="carousel-item square-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058da60f8ba2.75411059_4_UpperTrapeziusStretch.webp" loading="lazy" alt="Release the neck"></div>
-      <div class="carousel-item square-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058f60f2e192.64555840_1_break.webp" loading="lazy" alt="Take Break"></div>
-      <div class="carousel-item square-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a0590228013e2.67892232_1_crossbodyelbows.webp" loading="lazy" alt="Cross and Hold"></div>
-      <div class="carousel-item square-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058d91bc25a4.90341252_2_SitBackSupportYourSpine..webp" loading="lazy" alt="Support Spine"></div>
-      <div class="carousel-item square-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058d3b3f28e0.79350450_5_hydration.webp" loading="lazy" alt="Hydrate"></div>
-      <div class="carousel-item square-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058d75b0dda6.51563402_3_standingbackextension.webp" loading="lazy" alt="Release Spine"></div>
-      <div class="carousel-item square-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058d62556f70.20732956_1_Kneesat90.webp" loading="lazy" alt="Feet Flat"></div>
-      <div class="carousel-item square-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058f3f3f9045.15794372_4_AdjustYourScreen.webp" loading="lazy" alt="Adjust Screen"></div>
-      <div class="carousel-item square-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058d8367ab83.22872584_4_8eyes.webp" loading="lazy" alt="Roll Slowly 8"></div>
-      <div class="carousel-item square-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058ddbd36634.70663676_2_WristFlexorStretch.webp" loading="lazy" alt="Relax Wrist"></div>
-      <div class="carousel-item square-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058e70520399.09078661_2_breathing.webp" loading="lazy" alt="Breathe Deep"></div>
     </div>
   </div>
 
@@ -941,6 +928,65 @@
     @media (max-width: 768px) {
       .tracker-grid { grid-template-columns: 1fr; }
     }
+
+    /* ── REMINDERS CAROUSEL SECTION ── */
+    .reminders-section {
+      margin-bottom: 64px;
+    }
+    .reminders-section-heading {
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--navy-mid);
+      margin-bottom: 6px;
+    }
+    .reminders-section-sub {
+      font-size: 15px;
+      color: var(--text-soft);
+      margin-bottom: 24px;
+      line-height: 1.5;
+    }
+    .reminders-carousel {
+      width: 100%;
+    }
+    .reminders-track {
+      display: flex;
+      gap: 16px;
+      overflow-x: auto;
+      padding: 8px 4px 24px;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+      scrollbar-color: var(--navy-mid) var(--navy-light);
+    }
+    .reminders-track::-webkit-scrollbar { height: 8px; }
+    .reminders-track::-webkit-scrollbar-track { background: var(--navy-light); border-radius: 10px; }
+    .reminders-track::-webkit-scrollbar-thumb { background-color: var(--navy-mid); border-radius: 10px; }
+    .reminder-card {
+      flex: 0 0 auto;
+      width: 200px;
+      height: 200px;
+      scroll-snap-align: start;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(30,58,95,0.08);
+      box-shadow: 0 6px 18px rgba(30,58,95,0.08);
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .reminder-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 32px rgba(30,58,95,0.14);
+    }
+    .reminder-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+    @media (max-width: 768px) {
+      .reminder-card { width: 160px; height: 160px; }
+    }
   </style>
 
   <div class="tracker-section">
@@ -951,6 +997,26 @@
       <div class="tracker-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a405cd7295246.49470486_PRINTABLESTRETCHINGPNG.webp" loading="lazy" alt="Stretching Tracker"></div>
       <div class="tracker-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a405cf0f2c462.65766975_PRINTABLEMORNINGPNG.webp" loading="lazy" alt="Morning Tracker"></div>
       <div class="tracker-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a405d028edff8.71928755_PRINTABLEAFTER-WORKPNG.webp" loading="lazy" alt="After-Work Tracker"></div>
+    </div>
+  </div>
+
+  <div class="reminders-section">
+    <p class="reminders-section-heading">📌 Desk Reminder Cards</p>
+    <p class="reminders-section-sub">Small cards to place on your desk, quick visual cues that remind you to stretch, breathe, hydrate, and fix your posture throughout the day.</p>
+    <div class="reminders-carousel">
+      <div class="reminders-track">
+        <div class="reminder-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058da60f8ba2.75411059_4_UpperTrapeziusStretch.webp" loading="lazy" alt="Release the neck"></div>
+        <div class="reminder-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058f60f2e192.64555840_1_break.webp" loading="lazy" alt="Take Break"></div>
+        <div class="reminder-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a0590228013e2.67892232_1_crossbodyelbows.webp" loading="lazy" alt="Cross and Hold"></div>
+        <div class="reminder-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058d91bc25a4.90341252_2_SitBackSupportYourSpine..webp" loading="lazy" alt="Support Spine"></div>
+        <div class="reminder-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058d3b3f28e0.79350450_5_hydration.webp" loading="lazy" alt="Hydrate"></div>
+        <div class="reminder-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058d75b0dda6.51563402_3_standingbackextension.webp" loading="lazy" alt="Release Spine"></div>
+        <div class="reminder-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058d62556f70.20732956_1_Kneesat90.webp" loading="lazy" alt="Feet Flat"></div>
+        <div class="reminder-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058f3f3f9045.15794372_4_AdjustYourScreen.webp" loading="lazy" alt="Adjust Screen"></div>
+        <div class="reminder-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058d8367ab83.22872584_4_8eyes.webp" loading="lazy" alt="Roll Slowly 8"></div>
+        <div class="reminder-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058ddbd36634.70663676_2_WristFlexorStretch.webp" loading="lazy" alt="Relax Wrist"></div>
+        <div class="reminder-card"><img src="https://d1yei2z3i6k35z.cloudfront.net/14980758/6a058e70520399.09078661_2_breathing.webp" loading="lazy" alt="Breathe Deep"></div>
+      </div>
     </div>
   </div>
 
